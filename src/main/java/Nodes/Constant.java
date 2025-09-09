@@ -2,6 +2,9 @@ package Nodes;
 
 import java.util.Optional;
 
+/**
+ * Represents a single constant number in the algebraic model
+ */
 public class Constant implements Node {
     // the value of the number represented by the constant
     private final double constant;
