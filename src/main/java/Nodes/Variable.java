@@ -28,4 +28,13 @@ public class Variable implements Node {
     public String toLatex() {
         return identifier;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Variable var)) {
+            return false;
+        }
+
+        return var.identifier.equals(identifier);
+    }
 }
