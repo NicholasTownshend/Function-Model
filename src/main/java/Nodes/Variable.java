@@ -37,4 +37,9 @@ public class Variable implements Node {
 
         return var.identifier.equals(identifier);
     }
+
+    @Override
+    public int hashCode() {
+        return identifier.hashCode();
+    }
 }

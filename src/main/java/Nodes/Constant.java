@@ -35,4 +35,9 @@ public class Constant implements Node {
 
         return constant.constant == this.constant;
     }
+
+    @Override
+    public int hashCode() {
+        return Double.hashCode(constant);
+    }
 }
