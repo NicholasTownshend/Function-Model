@@ -26,4 +26,13 @@ public class Constant implements Node {
     public String toLatex() {
         return String.valueOf(constant);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Constant constant)) {
+            return false;
+        }
+
+        return constant.constant == this.constant;
+    }
 }
