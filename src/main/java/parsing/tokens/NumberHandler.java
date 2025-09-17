@@ -20,7 +20,7 @@ public class NumberHandler extends TokenHandler {
         StringBuilder sb = new StringBuilder();
 
         while (peekIsDigit(parser.peek())) {
-            sb.append(parser.next());
+            sb.append(parser.next().get());
         }
 
         if (sb.isEmpty()) return Optional.empty();
