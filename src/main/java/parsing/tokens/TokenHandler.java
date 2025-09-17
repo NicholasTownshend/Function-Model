@@ -13,8 +13,7 @@ public abstract class TokenHandler {
 
     public Optional<Token> handle(Parser<Character> parser) {
         if (canCreate(parser)) {
-            Token token = create(parser);
-            return Optional.ofNullable(token);
+            return create(parser);
         }
 
         if (nextHandler == null) return Optional.empty();
@@ -26,5 +25,5 @@ public abstract class TokenHandler {
     }
 
     public abstract boolean canCreate(Parser<Character> parser);
-    public abstract Token create(Parser<Character> parser);
+    public abstract Optional<Token> create(Parser<Character> parser);
 }
